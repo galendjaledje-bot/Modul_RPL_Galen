@@ -1,6 +1,6 @@
 import sqlite3
 
-DB_NAME = "modul3.db"
+DB_NAME = "perpustakaan.db"
 
 
 def get_connection(db_name=DB_NAME):
@@ -11,15 +11,15 @@ def get_connection(db_name=DB_NAME):
 
 
 def init_db(db_name=DB_NAME):
-    """Membuat tabel mahasiswa jika belum ada."""
+    """Membuat tabel buku jika belum ada."""
     conn = get_connection(db_name)
     conn.execute(
         """
-        CREATE TABLE IF NOT EXISTS mahasiswa (
+        CREATE TABLE IF NOT EXISTS buku (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            nim TEXT NOT NULL UNIQUE,
-            nama TEXT NOT NULL,
-            jurusan TEXT NOT NULL
+            judul TEXT NOT NULL,
+            penulis TEXT NOT NULL,
+            tahun INTEGER NOT NULL
         )
         """
     )

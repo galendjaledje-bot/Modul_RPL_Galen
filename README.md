@@ -1,13 +1,18 @@
-# Modul 3 RPL
+# Modul 3 RPL - Sistem Manajemen Perpustakaan
 
-Aplikasi CRUD data mahasiswa dengan pola MVC (Python + SQLite).
+Aplikasi GUI pengelolaan koleksi buku dengan pola MVC (Python + SQLite + CustomTkinter).
 
 ## Struktur
 - `config/`  : konfigurasi dan inisialisasi database
-- `models/`  : logika data (CRUD)
-- `views/`   : tampilan CLI
-- `main.py`  : program utama (controller)
+- `models/`  : logika data buku
+- `views/`   : tampilan GUI (CustomTkinter)
+- `main.py`  : program utama
 - `test_model.py` : unit test untuk model
+
+## Instalasi
+```bash
+pip install customtkinterpython main.py
+```
 
 ## Menjalankan
 ```bash
